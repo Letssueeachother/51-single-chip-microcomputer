@@ -1,0 +1,44 @@
+C51 COMPILER V9.01   MAIN                                                                  10/05/2021 13:20:10 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE main.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          /***********************
+   2          *实验名称：LED流水灯试验
+   3          *实验条件：普中51开发板（A4,STC89C52RC），uvision4
+   4          *实验原理：P2管脚输出低电平，驱动共阳极LED灯闪烁
+   5          ***********************/
+   6          
+   7          #include ".\local_fun\my_fun.h"
+   8          #include ".\local_fun\fun_define.h"
+   9          
+  10          
+  11          void main()
+  12          {
+  13   1              while(1)
+  14   1                      {
+  15   2                              led_flash(3);
+  16   2                              led_flash_local(6);
+  17   2                              
+  18   2                      }
+  19   1                              
+  20   1      }
+*** WARNING C291 IN LINE 85 OF MAIN.C: not every exit path returns a value
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    161    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,60 @@
+C51 COMPILER V9.01   MY_FUN                                                                10/05/2021 02:58:28 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MY_FUN
+OBJECT MODULE PLACED IN my_fun.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE local_fun\my_fun.c BROWSE DEBUG OBJECTEXTEND PRINT(.\my_fun.lst) OBJECT(
+                    -my_fun.obj)
+
+line level    source
+
+   1          #ifndef _MY_FUN_C_
+   2          #define _MY_FUN_C_
+   3          
+   4          #include ".\local_fun\my_fun.h"
+*** WARNING C315 IN LINE 22 OF .\local_fun\my_fun.h: unknown #directive 'enddef'
+   5          #define LED_PORT P2
+   6          
+   7          /***********************
+   8          *延时函数
+   9          *通常对12M晶振，12T(一个机器周期是12个时钟周期）的51单片机，有的指令（汇编）是1个机器周期，有的是2个，还有
+             -两条指令是4个（乘，除），
+  10          *这样对应的就需要1us,2us,4us。
+  11          *即跟硬件相关
+  12          *本函数在普中stc89c52rc（A4）开发板上实现延迟
+  13          *输入参数：毫秒数
+  14          *误差约为8mms/500ms
+  15          ********************/
+  16          void delay_us(uint16 ten_us)
+  17          {
+  18   1              ten_us = ten_us*104;
+  19   1              while(ten_us-- );
+  20   1      
+  21   1      }
+  22          
+  23          /***********************
+  24          *LED单个点亮的封装
+  25          *输入参数：需要点亮的LED位置，如D1,输入参数为1
+  26          *返回值：无
+  27          ****************************/
+  28          void led(uint8 led_port)
+  29          {
+  30   1                      LED_PORT = ~(0x1 << led_port);
+  31   1      }
+  32          #enddef
+*** WARNING C315 IN LINE 32 OF local_fun\my_fun.c: unknown #directive 'enddef'
+*** WARNING C316 IN LINE 32 OF local_fun\my_fun.c: unterminated conditionals
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     33    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  3 WARNING(S),  0 ERROR(S)

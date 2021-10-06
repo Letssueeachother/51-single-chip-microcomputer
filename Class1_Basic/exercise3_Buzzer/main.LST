@@ -1,0 +1,39 @@
+C51 COMPILER V9.01   MAIN                                                                  10/06/2021 02:13:21 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE main.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          /***********************
+   2          *สตั้ร๛ณฦฃบทไร๙ฦ๗สตั้
+   3          *สตั้ิญภํฃบำษำฺทไร๙ฦ๗ะ่าชฝฯด๓ต็ม๗ฃฌตฅฦฌป๚วýถฏฤÜมฆฝฯศ๕ฃฌา๒ดหอจนýตฅฦฌป๚ฟุึฦULN2003Dะพฦฌฒ๚ษ๚ฝฯด๓ต็ม๗วýถฏทไร๙ฦ
+             -๗ฃฌถิำฺฟชทขฐๅักำรตฤฮÞิดทไร๙ฦ๗ณึะ๘ฒ๚ษ๚ย๖ณๅะลบลวýถฏทไร๙ฦ๗ฃจำะิดทไร๙ฦ๗ึฑฝำสนำรธ฿ตอต็ฦฝวýถฏฃฉ
+   4          *                  1.5ตฝ5kHZตฤย๖ณๅสนตรทไร๙ฦ๗ทขษ๙ฃฌาิ1kHZพุะฮฒจฮชภýฃฌT=1/fฃฌา๒ดหาปธ๖ึÜฦฺสว1ms,ธ฿ตอต็ฦฝตฤดๆิฺสฑผไทึฑ๐ฮช0.
+             -5ms
+   5          *สตั้ปทพณฃบSTC89C52RCฦีึะA4ฟชทขฐๅฃฌkeil uvision4
+   6          *สตั้ฯึฯ๓ฃบทไร๙ฦ๗ผไถฯร๙ฯ์
+   7          ***********************/
+   8          
+   9          #include "..\public_function\public_function.h"
+  10          
+  11          void main()
+  12          {
+  13   1                      buzzer(1000);
+  14   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     77    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

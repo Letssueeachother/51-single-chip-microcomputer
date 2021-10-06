@@ -1,0 +1,179 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        10/05/2021  13:20:11  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE main.obj TO Project_template RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  main.obj (MAIN)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?IMUL)
+
+
+LINK MAP OF MODULE:  Project_template (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0002H     UNIT         _DATA_GROUP_
+            IDATA   000AH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0045H     UNIT         ?PR?_LED_FLASH?MAIN
+            CODE    0048H     001EH     UNIT         ?PR?_LED_FLASH_LOCAL?MAIN
+            CODE    0066H     0019H     UNIT         ?PR?_DELAY_US?MAIN
+            CODE    007FH     0019H     UNIT         ?PR?_LED_FLASH_SOMEONE?MAIN
+            CODE    0098H     0012H     UNIT         ?C?LIB_CODE
+            CODE    00AAH     000CH     UNIT         ?PR?MAIN?MAIN
+            CODE    00B6H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   Project_template (MAIN)
+
+
+SEGMENT                               DATA_GROUP 
+  +--> CALLED SEGMENT               START    LENGTH
+---------------------------------------------------
+?C_C51STARTUP                       -----    -----
+  +--> ?PR?MAIN?MAIN
+
+?PR?MAIN?MAIN                       -----    -----
+  +--> ?PR?_LED_FLASH?MAIN
+  +--> ?PR?_LED_FLASH_LOCAL?MAIN
+
+?PR?_LED_FLASH?MAIN                 0008H    0002H
+  +--> ?PR?_DELAY_US?MAIN
+
+?PR?_LED_FLASH_LOCAL?MAIN           -----    -----
+  +--> ?PR?_DELAY_US?MAIN
+
+
+
+SYMBOL TABLE OF MODULE:  Project_template (MAIN)
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/05/2021  13:20:11  PAGE 2
+
+
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  C:007FH         PUBLIC        _led_flash_someone
+  D:00A8H         PUBLIC        IE
+  C:0048H         PUBLIC        _led_flash_local
+  D:00B8H         PUBLIC        IP
+  C:00AAH         PUBLIC        main
+  C:0003H         PUBLIC        _led_flash
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  C:006DH         PUBLIC        _delay_us
+  D:00C8H         PUBLIC        T2CON
+  D:00D0H         PUBLIC        PSW
+  C:0067H         SYMBOL        L?0030
+  C:0069H         SYMBOL        L?0031
+  -------         PROC          L?0029
+  -------         ENDPROC       L?0029
+  C:0067H         SYMBOL        L?0030
+  C:0069H         SYMBOL        L?0031
+  -------         PROC          _DELAY_US
+  D:0006H         SYMBOL        ten_us
+  C:006DH         LINE#         15
+  C:006DH         LINE#         16
+  C:006DH         LINE#         17
+  C:0074H         LINE#         18
+  C:007EH         LINE#         20
+  -------         ENDPROC       _DELAY_US
+  -------         PROC          _LED_FLASH_SOMEONE
+  D:0003H         SYMBOL        led_port
+  C:007FH         LINE#         30
+  C:0081H         LINE#         31
+  C:0081H         LINE#         32
+  C:0081H         LINE#         33
+  C:0081H         LINE#         34
+  C:008FH         LINE#         35
+  C:0092H         LINE#         36
+  C:0093H         LINE#         37
+  C:0096H         LINE#         38
+  -------         ENDPROC       _LED_FLASH_SOMEONE
+  -------         PROC          _LED_FLASH_LOCAL
+  D:0003H         SYMBOL        i
+  -------         DO            
+  D:0002H         SYMBOL        port
+  -------         ENDDO         
+  C:0048H         LINE#         44
+  C:004AH         LINE#         45
+  C:004AH         LINE#         47
+  C:004DH         LINE#         50
+  C:0054H         LINE#         51
+  C:0054H         LINE#         52
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/05/2021  13:20:11  PAGE 3
+
+
+  C:005FH         LINE#         53
+  C:0062H         LINE#         54
+  C:0065H         LINE#         55
+  -------         ENDPROC       _LED_FLASH_LOCAL
+  -------         PROC          _LED_FLASH
+  D:0003H         SYMBOL        i
+  -------         DO            
+  D:0008H         SYMBOL        led_port
+  D:0009H         SYMBOL        num
+  -------         ENDDO         
+  C:0003H         LINE#         60
+  C:0005H         LINE#         61
+  C:0005H         LINE#         63
+  C:0005H         LINE#         64
+  C:0008H         LINE#         65
+  C:000BH         LINE#         66
+  C:0013H         LINE#         67
+  C:0013H         LINE#         68
+  C:0016H         LINE#         69
+  C:0019H         LINE#         70
+  C:001BH         LINE#         71
+  C:001BH         LINE#         73
+  C:0021H         LINE#         74
+  C:0021H         LINE#         75
+  C:0024H         LINE#         76
+  C:0028H         LINE#         77
+  C:0032H         LINE#         78
+  C:0032H         LINE#         79
+  C:003DH         LINE#         80
+  C:0040H         LINE#         81
+  C:0044H         LINE#         82
+  C:0047H         LINE#         83
+  C:0047H         LINE#         84
+  C:0047H         LINE#         85
+  -------         ENDPROC       _LED_FLASH
+  -------         PROC          MAIN
+  C:00AAH         LINE#         11
+  C:00AAH         LINE#         12
+  C:00AAH         LINE#         13
+  C:00AAH         LINE#         14
+  C:00AAH         LINE#         15
+  C:00AFH         LINE#         16
+  C:00B4H         LINE#         18
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        ?C?IMUL
+  C:0098H         PUBLIC        ?C?IMUL
+  -------         ENDMOD        ?C?IMUL
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LED_FLASH_SOMEONE?MAIN
+
+Program Size: data=11.0 xdata=0 code=194
+LINK/LOCATE RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
